@@ -1,0 +1,22 @@
+{
+    "type": "project",
+    "require": {
+        "pimple/pimple": "^3.3.1",
+        "ext-mbstring": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/{$vendor}/{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "To_Do\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    }
+}
