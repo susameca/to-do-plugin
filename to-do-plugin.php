@@ -40,3 +40,13 @@ function to_do_plugin_init() {
 	add_action( 'admin_enqueue_scripts', [ 'To_Do\Scripts', 'admin_scripts' ] );
 	add_action( 'wp_loaded', [ 'To_Do\Admin\Menu', 'init' ] );
 }
+
+register_activation_hook( __FILE__, function() {
+	require_once TODO_PLUGIN_DIR . '/vendor/autoload.php';
+
+	$database = new To_Do\Database();
+
+	if ( !$database->exists() ) {
+		$database->create_table();
+	}
+} );
