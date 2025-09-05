@@ -17,13 +17,14 @@ class Database {
 	}
 
 	public function exists() {
-		$sql = $this->wpdb->prepare('SHOW TABLES LIKE %s', $this->table_name);
-		$found = $this->wpdb->get_var($sql);
+		$sql = $this->wpdb->prepare( 'SHOW TABLES LIKE %s', $this->table_name );
+		$found = $this->wpdb->get_var( $sql );
+
 		return $found === $this->table_name;
 	}
 
 	public function create_table() {
-		if (!function_exists('dbDelta')) {
+		if ( !function_exists('dbDelta') ) {
 			require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		}
 
