@@ -1,4 +1,4 @@
-<tr>
+<tr data-id="<?php echo $id ?>">
 	<td> <strong> <?php echo $title ?> </strong> </td>
 	<td> <?php echo $description ?> </td>
 	<td> <?php echo $category ?> </td>

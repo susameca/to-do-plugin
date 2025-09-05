@@ -17,8 +17,6 @@ $database = new Database();
 			<input type="text" name="category" placeholder="<?php _e('Category', 'to-do') ?>">
 
 			<button class="button button-primary"><?php _e('Submit', 'to-do') ?></button>
-
-			<?php wp_nonce_field( 'wp_rest', '_wpnonce' ) ?>
 		</form>
 
 		<br>

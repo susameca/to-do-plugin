@@ -16,7 +16,7 @@ class Rest {
 		return is_user_logged_in() && current_user_can( 'manage_options' );
 	}
 
-	public static function register_routes(): void {
+	public static function register_routes() {
 		register_rest_route( self::ENDPOINT, '/todos', [
 			[
 				'methods'             => WP_REST_Server::READABLE,

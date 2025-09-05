@@ -16,6 +16,7 @@ class Enqueue {
 
 		wp_localize_script( 'todo-js-admin', 'toDo', array(
 			'restUrl' => get_rest_url( null, Rest::ENDPOINT ),
+			'restNonce' => wp_create_nonce( 'wp_rest' ),
 		) );
 
 		wp_enqueue_style(
