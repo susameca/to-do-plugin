@@ -1,0 +1,97 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: To-do list\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-05 20:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.3.4\n"
+"X-Domain: to-do"
+
+#: fragments/admin/form-labels.php:7
+msgid "Actions"
+msgstr ""
+
+#: fragments/shortcode.php:18
+msgid "Cancel"
+msgstr ""
+
+#: fragments/shortcode.php:15 fragments/admin/form-labels.php:4
+msgid "Category"
+msgstr ""
+
+#: fragments/admin/form-labels.php:5
+msgid "Creation date"
+msgstr ""
+
+#: src/Rest.php:142
+msgid "Deleted successfully!"
+msgstr ""
+
+#: fragments/shortcode.php:14 fragments/admin/form-labels.php:3
+msgid "Description"
+msgstr ""
+
+#: src/Rest.php:61
+msgid "Fields \"title\", \"description\" and \"category\" are required."
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wordpress.org/plugins/bulgarisation-for-woocommerce/"
+msgstr ""
+
+#: fragments/admin/form-labels.php:6
+msgid "Last update date"
+msgstr ""
+
+#: src/Rest.php:100 src/Rest.php:119 src/Rest.php:137
+msgid "No todo is found with this value."
+msgstr ""
+
+#: to-do-plugin.php:31
+msgid "Please run `composer install` in the plugin folder `to-do-plugin`"
+msgstr ""
+
+#: fragments/shortcode.php:17
+msgid "Submit"
+msgstr ""
+
+#. Author of the plugin
+msgid "Tihomir Parushev"
+msgstr ""
+
+#: fragments/shortcode.php:13 fragments/admin/form-labels.php:2
+msgid "Title"
+msgstr ""
+
+#: src/Admin/Menu.php:18 src/Admin/Menu.php:19
+msgid "To do list"
+msgstr ""
+
+#: fragments/admin/list.php:2
+msgid "To-do List"
+msgstr ""
+
+#. Name of the plugin
+msgid "To-do list"
+msgstr ""
+
+#. Description of the plugin
+msgid "To-do list plugin with admin page and Gutenberg block"
+msgstr ""
+
+#: src/Rest.php:89
+msgid "Todo is successfully added!"
+msgstr ""
+
+#: src/Rest.php:126
+msgid "Todo is successfully updated!"
+msgstr ""
