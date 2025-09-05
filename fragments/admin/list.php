@@ -17,6 +17,7 @@ $database = new Database();
 			<input type="text" name="category" placeholder="<?php _e('Category', 'to-do') ?>">
 
 			<button class="button button-primary"><?php _e('Submit', 'to-do') ?></button>
+			<a href="#" class="button button-secondary button-cancel" style="display: none;"><?php _e('Cancel', 'to-do') ?></a>
 		</form>
 
 		<br>
