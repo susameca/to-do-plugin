@@ -37,7 +37,7 @@ function to_do_plugin_init() {
 
 	require_once TODO_PLUGIN_DIR . '/src/functions.php';
 
-	add_action( 'admin_enqueue_scripts', [ 'To_Do\Scripts', 'admin_scripts' ] );
+	add_action( 'admin_enqueue_scripts', [ 'To_Do\Enqueue', 'admin_scripts' ] );
 	add_action( 'wp_loaded', [ 'To_Do\Admin\Menu', 'init' ] );
 	add_action( 'rest_api_init', [ 'To_Do\Rest', 'register_routes' ] );
 }

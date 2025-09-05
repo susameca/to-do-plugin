@@ -1,9 +1,10 @@
 <?php
 namespace To_Do;
 
+use To_Do\Rest;
 defined( 'ABSPATH' ) || exit;
 
-class Scripts {
+class Enqueue {
 	public static function admin_scripts() {
 		wp_enqueue_script(
 			'todo-js-admin',
@@ -14,12 +15,12 @@ class Scripts {
 		);
 
 		wp_localize_script( 'todo-js-admin', 'toDo', array(
-			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'restUrl' => get_rest_url( null, Rest::ENDPOINT ),
 		) );
 
 		wp_enqueue_style(
 			'todo-css-bundle',
-			TODO_PLUGIN_URL . 'assets/js/admin.css',
+			TODO_PLUGIN_URL . 'assets/css/admin.css',
 		);
 	}
 }

@@ -54,9 +54,9 @@ class Rest {
 
 	private static function validate_params( $params ) {
 		if ( 
-			!isset( $params['title'] ) || 
-			!isset( $params['description'] ) || 
-			!isset( $params['category'] )
+			empty( $params['title'] ) || 
+			empty( $params['description'] ) || 
+			empty( $params['category'] )
 		) {
 			 return new WP_Error( 'todo_list_invalid', __( 'Fields "title", "description" and "category" are required.', 'to-do' ), [ 'status' => 400 ] );
 		}
@@ -85,8 +85,10 @@ class Rest {
 
 		$database = new Database();
         $id = $database->insert( $data );
+        $response = $database->get( $id );
+        $response['message'] = __('Todo is successfully added!', 'to-do' );
 
-        return new WP_REST_Response( $database->get( $id ), 200 );
+        return new WP_REST_Response( $response, 200 );
     }
 
     public static function get_todo( WP_REST_Request $request ) {
@@ -120,7 +122,10 @@ class Rest {
 		$database = new Database();
         $database->update( $id, $data );
 
-        return new WP_REST_Response( $database->get( $id ), 200 );
+        $response = $database->get( $id );
+        $response['message'] = __('Todo is successfully updated!', 'to-do' );
+
+        return new WP_REST_Response( $response, 200 );
     }
 
     public static function delete_todo( WP_REST_Request $request ) {
@@ -134,6 +139,6 @@ class Rest {
 
 		$database->delete( $id );
 
-        return new WP_REST_Response( [ 'message' => __( 'Deleted successfully', 'to-do' ) ], 200 );
+        return new WP_REST_Response( [ 'message' => __( 'Deleted successfully!', 'to-do' ) ], 200 );
     }
 }
